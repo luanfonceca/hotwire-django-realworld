@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
 
-def view(req, title):
+def view(req, slug):
     return render(req, "articles/detail.html")
 
 
