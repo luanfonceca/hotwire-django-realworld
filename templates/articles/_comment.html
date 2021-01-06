@@ -7,16 +7,19 @@
     <div class="card-footer">
         <a href="" class="comment-author">
             <img
-                    src="{{ comment.author.image }}"
+                    src="{{ comment.author.img }}"
                     class="comment-author-img"
             />
         </a>
         &nbsp;
         <a href="" class="comment-author">{{ comment.author }}</a>
-        <span class="date-posted"></span>
+        <span class="date-posted">{{ comment.created_at }}</span>
+
+        {% if user.pk == comment.author.pk %}
         <span class="mod-options">
               <i class="ion-edit"></i>
               <i class="ion-trash-a"></i>
             </span>
+        {% endif %}
     </div>
 </div>
