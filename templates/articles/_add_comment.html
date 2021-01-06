@@ -9,9 +9,10 @@
         </div>
         <div class="card-footer">
             <img
-                    src="http://i.imgur.com/Qr71crq.jpg"
+                    src="{{ user.profile.img }}"
                     class="comment-author-img"
             />
+            <span class="comment-author">Commenting as <a href="">{{ user }}</a></span>
             <button class="btn btn-sm btn-primary">Post Comment</button>
         </div>
     </form>
